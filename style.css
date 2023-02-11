@@ -12,7 +12,8 @@
 
 a {
     text-decoration: none;
-    color: var(--accent-color2)
+    color: var(--accent-color2);
+    cursor: pointer;
 }
 
 a:hover {
@@ -30,6 +31,15 @@ header {
     justify-content: space-around;
 }
 
+hr {
+    width: 90vw;
+    border: 1px solid var(--accent-color3);
+}
+
+#coding-projects {
+    background-color: var(--main-bg-color);
+}
+
 #intro {
     display: flex;
     align-items: center;
@@ -40,14 +50,6 @@ header {
     font-size: 5em;
     color: var(--accent-color2);
     max-width: 50vw;
-}
-
-#projects {
-    background-color: var(--accent-color1);
-}
-
-#projects h3 {
-    font-size: 2em;
 }
 
 .hidden-pic {
@@ -83,11 +85,33 @@ header {
     justify-content: flex-start;
 }
 
+.projects {
+    background-color: var(--accent-color1);
+    align-items: center;
+    justify-content: center;
+}
+
+.projects h2 {
+    color: var(--accent-color3);
+    font-size: 3em;
+    margin-left: 15vw;
+}
+
+.projects h3 {
+    font-size: 2em;
+}
+
 .shown-pic{
     max-width: 35vw;
     display: block;
     transition: 1.0s;
     margin: 3em;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo {
@@ -103,4 +127,10 @@ header {
 .menu-hor li {
     margin: 2em;
     font-size: 1.25em;
+}
+
+.vertical-line {
+    margin: 1em;
+    border-right: 3px solid var(--accent-color3);
+    height: 1em;
 }
