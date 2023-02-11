@@ -1,6 +1,7 @@
 :root {
     margin: none;
     padding: none;
+    overflow-x: hidden;
     --main-bg-color: #03001C;
     --accent-color1: #301E67;
     --accent-color2: #5B8FB9;
@@ -41,14 +42,52 @@ header {
     max-width: 50vw;
 }
 
+#projects {
+    background-color: var(--accent-color1);
+}
+
+#projects h3 {
+    font-size: 2em;
+}
+
 .hidden-pic {
-    max-height: 75vh;
+    max-width: 35vw;
     display: none;
+    transition: 1.0s;
+    position: absolute;
+    right: -5vw;
+}
+
+.hilight {
+    color: var(--accent-color3);
+}
+
+.project {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.project img {
+    max-width: 50vw;
+    margin: 3em;
+}
+
+.project-description {
+    color: var(--accent-color3);
+    font-size: 1.25em;
+    margin: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .shown-pic{
-    max-height: 75vh;
+    max-width: 35vw;
     display: block;
+    transition: 1.0s;
+    margin: 3em;
 }
 
 .logo {
