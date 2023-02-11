@@ -6,6 +6,7 @@
     --accent-color2: #5B8FB9;
     --accent-color3: #B6EADA;
     background-color: var(--main-bg-color);
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 a {
@@ -26,6 +27,28 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+#intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#intro p {
+    font-size: 5em;
+    color: var(--accent-color2);
+    max-width: 50vw;
+}
+
+.hidden-pic {
+    max-height: 75vh;
+    display: none;
+}
+
+.shown-pic{
+    max-height: 75vh;
+    display: block;
 }
 
 .logo {
