@@ -8,6 +8,15 @@
     background-color: var(--main-bg-color);
 }
 
+a {
+    text-decoration: none;
+    color: var(--accent-color2)
+}
+
+a:hover {
+    color: var(--accent-color3);    
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -20,5 +29,16 @@ header {
 }
 
 .logo {
-    max-width: 20em;
+    max-width: 15em;
+}
+
+.menu-hor {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.menu-hor li {
+    margin: 2em;
+    font-size: 1.25em;
 }
