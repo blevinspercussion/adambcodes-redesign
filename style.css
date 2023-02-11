@@ -1,4 +1,24 @@
 :root {
     margin: none;
     padding: none;
+    --main-bg-color: #03001C;
+    --accent-color1: #301E67;
+    --accent-color2: #5B8FB9;
+    --accent-color3: #B6EADA;
+    background-color: var(--main-bg-color);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo {
+    max-width: 20em;
 }
