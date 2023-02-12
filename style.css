@@ -60,7 +60,7 @@ html {
     flex-direction: row;
     position: absolute;
     top: 93px;
-    right: 550px;
+    /* right: 550px; */
     background-color: var(--accent-color1);
     list-style: none;
     float: left;
@@ -75,12 +75,13 @@ html {
     opacity: 1;
     position: absolute;
     top: 93px;
-    right: 450px;
+    right: 250px;
     background-color: var(--accent-color1);
     list-style: none;
     float: left;
     max-width: 35vw;
     transition: 0.5s;
+    filter: blur(0px);
 }
 
 .projects-menu-hidden {
@@ -90,6 +91,7 @@ html {
     right: 200px;
     filter: blur();
     transition: 0.5s;
+    filter: blur(5px);
 }
 
 #projects-menu li {
