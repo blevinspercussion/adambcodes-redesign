@@ -9,14 +9,14 @@ class DesktopHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
     <header>
-    <img class="logo" src="./media/images/AdamBCodesLogo.png" alt="" />
+    <a href="./index.html"><img class="logo" src="./media/images/AdamBCodesLogo.png" alt="" /></a>
     <ul class="menu-hor">
       <div id="project-menu-container">
-        <li id="projects-menu-item" class="menu-item"><a href="#webdev-projects">Projects</a></li>
+        <li id="projects-menu-item" class="menu-item"><a href="./index.html#webdev-projects">Projects</a></li>
         <ul id="projects-menu" class="projects-menu-hidden">
-          <li class="projects-menu-item"><a href="#webdev-projects">Web Development Projects</a></li>
-          <li class="projects-menu-item"><a href="#coding-projects">Coding Projects</a></li>
-          <li class="projects-menu-item"><a href="#other-projects">Other Projects</a></li>
+          <li class="projects-menu-item"><a href="./index.html#webdev-projects">Web Development Projects</a></li>
+          <li class="projects-menu-item"><a href="./index.html#coding-projects">Coding Projects</a></li>
+          <li class="projects-menu-item"><a href="./index.html#other-projects">Other Projects</a></li>
         </ul>
       </div>
       <li><a href="./tutoring.html">Tutoring</a></li>
@@ -25,6 +25,7 @@ class DesktopHeader extends HTMLElement {
   </ul>
   
   </header>
+  <hr />
       `;
   }
 }
