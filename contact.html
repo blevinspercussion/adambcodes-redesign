@@ -1,9 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -11,26 +8,60 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
     <script src="./script.js" defer></script>
-    <title>Adam B. About</title>
+    <title>Adam B. Contact</title>
+    <script>
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+      >
+    </script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init("SWkhL6LZwTytUNo9D");
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            // generate a five digit number for the contact_number variable
+            this.contact_number.value = (Math.random() * 100000) | 0;
+            // these IDs from the previous steps
+            emailjs.sendForm("service_ougo6mx", "template_yjx6b4u", this).then(
+              function () {
+                console.log("SUCCESS!");
+              },
+              function (error) {
+                console.log("FAILED...", error);
+              }
+            );
+          });
+      };
+    </script>
   </head>
+  <desktop-header></desktop-header>
   <body>
-    <desktop-header></desktop-header>
-    <form method="post" name="contact_form" action="contact-form-handler.php">
+    <form id="contact-form">
       <div class="form-fields-div">
-        <label for="name">Your Name:</label>
-        <input type="text" name="name" />
+        <label>Name</label>
+        <input type="text" name="user_name" />
       </div>
       <div class="form-fields-div">
-        <label for="email">Your Email Address:</label>
-        <input type="text" name="email" />
+        <label>Email</label>
+        <input type="email" name="user_email" />
       </div>
       <div class="form-fields-div">
-        <label for="message">Message:</label>
+        <label>Message</label>
         <textarea name="message"></textarea>
       </div>
-
-      <input class="button" type="submit" value="Submit" />
+      <input type="submit" value="Send" />
     </form>
   </body>
 </html>
