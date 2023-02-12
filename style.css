@@ -57,9 +57,6 @@ html {
 }
 
 #projects-menu {
-    /* display: flex;
-    align-items: flex-start;
-    justify-content: center; */
     flex-direction: row;
     position: absolute;
     top: 93px;
@@ -75,18 +72,24 @@ html {
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-    position: fixed;
+    opacity: 1;
+    position: absolute;
     top: 93px;
     right: 450px;
     background-color: var(--accent-color1);
     list-style: none;
-    /* border-radius: 15px; */
     float: left;
     max-width: 35vw;
+    transition: 0.5s;
 }
 
 .projects-menu-hidden {
-    display: none;
+    display: flex;
+    opacity: 0;
+    position: absolute;
+    right: 200px;
+    filter: blur();
+    transition: 0.5s;
 }
 
 #projects-menu li {
@@ -112,10 +115,12 @@ html {
 
 .menu-item-active {
     background-color: var(--accent-color1);
+    transition: 0.5s;
 }
 
 .menu-item-inactive {
     background-color: var(--main-bg-color);
+    transition: 0.5s;
 }
 
 .project {

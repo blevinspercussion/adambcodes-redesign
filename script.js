@@ -70,3 +70,11 @@ projectsMenu.addEventListener("mouseleave", () => {
   projectsMenu.classList.add("projects-menu-hidden");
   projectsMenuItem.classList.remove("menu-item-active");
 });
+
+
+projectsMenuItem.addEventListener("click", () => {
+    projectsMenuItem.classList.remove("menu-item-active");
+    projectsMenu.classList.remove("projects-menu-shown");
+    projectsMenu.classList.add("projects-menu-hidden");
+
+})
