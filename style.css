@@ -56,6 +56,24 @@ html {
   scroll-behavior: smooth;
 }
 
+#about {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#about div {
+    display: flex;
+    flex-direction: column;
+    margin: 3em;
+}
+
+#about div p {
+    color: var(--accent-color2);
+    font-size: 1.5em;
+    margin: 1em;
+}
+
 #coding-projects {
   background-color: var(--main-bg-color);
 }
