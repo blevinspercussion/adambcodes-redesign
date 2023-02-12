@@ -27,8 +27,8 @@ class DesktopHeader extends HTMLElement {
           <li class="tutoring-menu-item"><a href="./tutoring.html#advanced-coding">Advanced Coding</a></li>
         </ul>
       </div>
-      <li><a href="./about.html">About Me</a></li>
-      <li><a href="./contact.html">Contact</a></li>
+      <li id="about-menu-item">><a href="./about.html">About Me</a></li>
+      <li id="contact-menu-item"><a href="./contact.html">Contact</a></li>
   </ul>
   
   </header>
@@ -52,6 +52,9 @@ const projectsMenu = document.getElementById("projects-menu");
 const tutoringMenuItem = document.getElementById("tutoring-menu-item");
 const tutoringMenu = document.getElementById("tutoring-menu");
 
+const aboutMenuItem = document.getElementById("about-menu-item");
+const contactMenuItem = document.getElementById("contact-menu-item");
+
 // DOM Functions
 
 function showProjectsMenu() {
@@ -61,46 +64,22 @@ function showProjectsMenu() {
 }
 
 function hideProjectsMenu() {
-    projectsMenu.classList.remove("projects-menu-shown");
-    projectsMenu.classList.add("projects-menu-hidden");
-    projectsMenuItem.classList.remove("menu-item-active");
+  projectsMenu.classList.remove("projects-menu-shown");
+  projectsMenu.classList.add("projects-menu-hidden");
+  projectsMenuItem.classList.remove("menu-item-active");
 }
 
 function showTutoringMenu() {
-    tutoringMenu.classList.remove("tutoring-menu-hidden");
-    tutoringMenu.classList.add("tutoring-menu-shown");
-    tutoringMenuItem.classList.add("menu-item-active");
+  tutoringMenu.classList.remove("tutoring-menu-hidden");
+  tutoringMenu.classList.add("tutoring-menu-shown");
+  tutoringMenuItem.classList.add("menu-item-active");
 }
 
 function hideTutoringMenu() {
-    tutoringMenu.classList.remove("tutoring-menu-shown");
-    tutoringMenu.classList.add("tutoring-menu-hidden");
-    tutoringMenuItem.classList.remove("menu-item-active");
+  tutoringMenu.classList.remove("tutoring-menu-shown");
+  tutoringMenu.classList.add("tutoring-menu-hidden");
+  tutoringMenuItem.classList.remove("menu-item-active");
 }
-
-// function toggleProjectsMenu() {
-//   if (projectsMenu.classList.contains("projects-menu-hidden")) {
-//     projectsMenu.classList.remove("projects-menu-hidden");
-//     projectsMenu.classList.add("projects-menu-shown");
-//     projectsMenuItem.classList.add("menu-item-active");
-//   } else {
-//     projectsMenu.classList.remove("projects-menu-shown");
-//     projectsMenu.classList.add("projects-menu-hidden");
-//     projectsMenuItem.classList.remove("menu-item-active");
-//   }
-// }
-
-// function toggleTutoringMenu() {
-//   if (tutoringMenu.classList.contains("tutoring-menu-hidden")) {
-//     tutoringMenu.classList.remove("tutoring-menu-hidden");
-//     tutoringMenu.classList.add("tutoring-menu-shown");
-//     tutoringMenuItem.classList.add("menu-item-active");
-//   } else {
-//     tutoringMenu.classList.remove("tutoring-menu-shown");
-//     tutoringMenu.classList.add("tutoring-menu-hidden");
-//     tutoringMenuItem.classList.remove("menu-item-active");
-//   }
-// }
 
 // Event listeners
 
@@ -127,5 +106,15 @@ tutoringMenu.addEventListener("mouseleave", () => {
 });
 
 tutoringMenuItem.addEventListener("click", () => {
+  hideTutoringMenu();
+});
+
+aboutMenuItem.addEventListener("mouseenter", () => {
+  hideProjectsMenu();
+  hideTutoringMenu();
+});
+
+contactMenuItem.addEventListener("mouseenter", () => {
+  hideProjectsMenu();
   hideTutoringMenu();
 });
