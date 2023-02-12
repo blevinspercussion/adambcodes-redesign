@@ -244,6 +244,12 @@ html {
 
 .logo {
   max-width: 15em;
+  transition: 0.35s;
+}
+
+.logo:hover {
+    filter: drop-shadow(5px 5px 4px var(--accent-color2));
+    transition: 0.35s;
 }
 
 .menu-hor {
