@@ -36,6 +36,10 @@ hr {
     border: 1px solid var(--accent-color3);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 #coding-projects {
     background-color: var(--main-bg-color);
 }
@@ -50,6 +54,16 @@ hr {
     font-size: 5em;
     color: var(--accent-color2);
     max-width: 50vw;
+}
+
+#projects-menu {
+    position: fixed;
+    top: 90px;
+    right: 600px;    
+    background-color: var(--accent-color1);
+    padding: 1em;
+    list-style: none;
+    border-radius: 15px;
 }
 
 .hidden-pic {
