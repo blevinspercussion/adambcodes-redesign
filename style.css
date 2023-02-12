@@ -57,17 +57,45 @@ html {
 }
 
 #projects-menu {
-    position: fixed;
-    top: 90px;
-    right: 600px;    
+    /* display: flex;
+    align-items: flex-start;
+    justify-content: center; */
+    flex-direction: row;
+    position: absolute;
+    top: 93px;
+    right: 550px;
     background-color: var(--accent-color1);
-    padding: 1em;
     list-style: none;
-    border-radius: 15px;
+    float: left;
+    max-width: 35vw;
+}
+
+.projects-menu-shown {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    position: fixed;
+    top: 93px;
+    right: 450px;
+    background-color: var(--accent-color1);
+    list-style: none;
+    /* border-radius: 15px; */
+    float: left;
+    max-width: 35vw;
+}
+
+.projects-menu-hidden {
+    display: none;
+}
+
+#projects-menu li {
+    margin: 1em;
 }
 
 .hidden-pic {
     max-width: 35vw;
+    min-width: 25vw;
     display: none;
     transition: 1.0s;
     position: absolute;
@@ -76,6 +104,18 @@ html {
 
 .hilight {
     color: var(--accent-color3);
+}
+
+.menu-item {
+    padding: 0.25em;
+}
+
+.menu-item-active {
+    background-color: var(--accent-color1);
+}
+
+.menu-item-inactive {
+    background-color: var(--main-bg-color);
 }
 
 .project {
@@ -146,5 +186,5 @@ html {
 .vertical-line {
     margin: 1em;
     border-right: 3px solid var(--accent-color3);
-    height: 1em;
+    height: 1em;    
 }
