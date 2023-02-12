@@ -19,7 +19,14 @@ class DesktopHeader extends HTMLElement {
           <li class="projects-menu-item"><a href="./index.html#other-projects">Other Projects</a></li>
         </ul>
       </div>
-      <li><a href="./tutoring.html">Tutoring</a></li>
+      <div id="tutoring-menu-container">
+        <li id="tutoring-menu-item" class="menu-item"><a href="./tutoring.html">Tutoring</a></li>
+        <ul id="tutoring-menu" class="tutoring-menu-hidden">
+          <li class="tutoring-menu-item"><a href="./tutoring.html#beginner-coding">Beginner Coding</a></li>
+          <li class="tutoring-menu-item"><a href="./tutoring.html#intermediate-coding">Intermediate Coding</a></li>
+          <li class="tutoring-menu-item"><a href="./tutoring.html#advanced-coding">Advanced Coding</a></li>
+        </ul>
+      </div>
       <li><a href="./about.html">About Me</a></li>
       <li><a href="./contact.html">Contact</a></li>
   </ul>
@@ -42,40 +49,83 @@ const introPicDrums = document.getElementById("intro-pic-drums");
 
 const projectsMenuItem = document.getElementById("projects-menu-item");
 const projectsMenu = document.getElementById("projects-menu");
+const tutoringMenuItem = document.getElementById("tutoring-menu-item");
+const tutoringMenu = document.getElementById("tutoring-menu");
 
-// swapIntroPics = () => {
-//     if(introPic.classList.contains("hidden-pic")) {
-//         introPic.classList.remove("hidden-pic");
-//         introPic.classList.add("shown-pic");
-//         introPicDrums.classList.remove("shown-pic");
-//         introPicDrums.classList.add("hidden-pic");
-//     }
-//     else {
-//         introPic.classList.remove("shown-pic");
-//         introPic.classList.add("hidden-pic");
-//         introPicDrums.classList.remove("hidden-pic");
-//         introPicDrums.classList.add("shown-pic");
-//     }
+// DOM Functions
+
+function showProjectsMenu() {
+  projectsMenu.classList.remove("projects-menu-hidden");
+  projectsMenu.classList.add("projects-menu-shown");
+  projectsMenuItem.classList.add("menu-item-active");
+}
+
+function hideProjectsMenu() {
+    projectsMenu.classList.remove("projects-menu-shown");
+    projectsMenu.classList.add("projects-menu-hidden");
+    projectsMenuItem.classList.remove("menu-item-active");
+}
+
+function showTutoringMenu() {
+    tutoringMenu.classList.remove("tutoring-menu-hidden");
+    tutoringMenu.classList.add("tutoring-menu-shown");
+    tutoringMenuItem.classList.add("menu-item-active");
+}
+
+function hideTutoringMenu() {
+    tutoringMenu.classList.remove("tutoring-menu-shown");
+    tutoringMenu.classList.add("tutoring-menu-hidden");
+    tutoringMenuItem.classList.remove("menu-item-active");
+}
+
+// function toggleProjectsMenu() {
+//   if (projectsMenu.classList.contains("projects-menu-hidden")) {
+//     projectsMenu.classList.remove("projects-menu-hidden");
+//     projectsMenu.classList.add("projects-menu-shown");
+//     projectsMenuItem.classList.add("menu-item-active");
+//   } else {
+//     projectsMenu.classList.remove("projects-menu-shown");
+//     projectsMenu.classList.add("projects-menu-hidden");
+//     projectsMenuItem.classList.remove("menu-item-active");
+//   }
+// }
+
+// function toggleTutoringMenu() {
+//   if (tutoringMenu.classList.contains("tutoring-menu-hidden")) {
+//     tutoringMenu.classList.remove("tutoring-menu-hidden");
+//     tutoringMenu.classList.add("tutoring-menu-shown");
+//     tutoringMenuItem.classList.add("menu-item-active");
+//   } else {
+//     tutoringMenu.classList.remove("tutoring-menu-shown");
+//     tutoringMenu.classList.add("tutoring-menu-hidden");
+//     tutoringMenuItem.classList.remove("menu-item-active");
+//   }
 // }
 
 // Event listeners
 
 projectsMenuItem.addEventListener("mouseenter", () => {
-  projectsMenu.classList.remove("projects-menu-hidden");
-  projectsMenu.classList.add("projects-menu-shown");
-  projectsMenuItem.classList.add("menu-item-active");
+  showProjectsMenu();
+  hideTutoringMenu();
 });
 
 projectsMenu.addEventListener("mouseleave", () => {
-  projectsMenu.classList.remove("projects-menu-shown");
-  projectsMenu.classList.add("projects-menu-hidden");
-  projectsMenuItem.classList.remove("menu-item-active");
+  hideProjectsMenu();
 });
 
-
 projectsMenuItem.addEventListener("click", () => {
-    projectsMenuItem.classList.remove("menu-item-active");
-    projectsMenu.classList.remove("projects-menu-shown");
-    projectsMenu.classList.add("projects-menu-hidden");
+  hideProjectsMenu();
+});
 
-})
+tutoringMenuItem.addEventListener("mouseenter", () => {
+  showTutoringMenu();
+  hideProjectsMenu();
+});
+
+tutoringMenu.addEventListener("mouseleave", () => {
+  hideTutoringMenu();
+});
+
+tutoringMenuItem.addEventListener("click", () => {
+  hideTutoringMenu();
+});
