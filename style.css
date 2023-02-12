@@ -10,6 +10,20 @@
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    inset: 0 0 5px var(black);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-color2);
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px var(--accent-color3);
+}
+
 a {
     text-decoration: none;
     color: var(--accent-color2);
@@ -23,6 +37,8 @@ a:hover {
 body {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    background-color: var(--main-bg-color);
 }
 
 header {
@@ -32,7 +48,7 @@ header {
 }
 
 hr {
-    width: 90vw;
+    width: 100vw;
     border: 1px solid var(--accent-color3);
 }
 
@@ -59,7 +75,7 @@ html {
 #projects-menu {
     flex-direction: row;
     position: absolute;
-    top: 93px;
+    top: 70px;
     /* right: 550px; */
     background-color: var(--accent-color1);
     list-style: none;
