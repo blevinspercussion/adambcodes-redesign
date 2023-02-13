@@ -8,7 +8,7 @@ class DesktopHeader extends HTMLElement {
   }
   connectedCallback() {
     this.innerHTML = `
-    <header>
+    <header id="desktop-header">
     <a href="./index.html"><img class="logo" src="./media/images/AdamBCodesLogo.png" alt="" /></a>
     <ul class="menu-hor">
       <div id="project-menu-container">
@@ -31,8 +31,8 @@ class DesktopHeader extends HTMLElement {
       <li id="contact-menu-item"><a href="./contact.html">Contact</a></li>
   </ul>
   
-  </header>
   <hr />
+  </header>
       `;
   }
 }

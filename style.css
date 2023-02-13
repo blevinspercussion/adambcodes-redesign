@@ -335,3 +335,40 @@ html {
   border-right: 3px solid var(--accent-color3);
   height: 1em;
 }
+
+
+@media screen and (max-width: 1000px) {
+
+    body {
+        overflow-x: hidden;
+    }
+    
+    #desktop-header {
+        display: none;
+    }
+
+    #hamburger-icon {
+        background-color: var(--accent-color3);
+        border-radius: 20%;
+        margin: 1em;
+    }
+
+    #intro {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #intro p {
+        font-size: 1.5em;
+    }
+
+    #mobile-header {
+        display: flex;
+        height: 20vh;
+        width: 90vw;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+
+}
