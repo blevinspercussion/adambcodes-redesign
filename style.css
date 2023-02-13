@@ -392,6 +392,7 @@ html {
     }
 
     #mobile-nav {
+        display: block;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -405,13 +406,13 @@ html {
     .mobile-nav-shown {
         top: 0vh;
         right: 0vw;
-        /* min-height: 100vh;
-        min-width: 100vw; */
+        min-height: 100vh;
+        min-width: 100vw;
         transition: ease-out 0.5s;
     }
 
     .mobile-nav-hidden {
-        top: 00vh;
+        top: 0vh;
         right: -100vh;
         transition: ease-in 0.5s;
     }
@@ -421,6 +422,7 @@ html {
     }
 
     #mobile-menu-exit-button {
+        display: block;
         position: absolute;
         border-radius: 25%;
         padding: 0.25em;

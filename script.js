@@ -169,6 +169,5 @@ hamburgerButton.addEventListener("click", () => {
 });
 
 mobileMenuExitButton.addEventListener("click", () => {
-  console.log("clicked");
   hideMobileMenu();
 });
