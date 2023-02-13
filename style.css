@@ -369,6 +369,28 @@ html {
         align-items: flex-end;
         justify-content: flex-end;
     }
+    .project {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .project img {
+        max-width: 90vw;
+        margin: none;
+    }
+
+    .projects h2 {
+        font-size: 1.75em;
+    }
+
+    .projects h3 {
+        font-size: 1.5em;
+    }
+
+    section {
+        max-width: 100vw;
+    }
 
 
 }
