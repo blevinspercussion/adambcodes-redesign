@@ -31,8 +31,8 @@ class DesktopHeader extends HTMLElement {
       <li id="contact-menu-item"><a href="./contact.html">Contact</a></li>
   </ul>
   
-  <hr />
   </header>
+  <hr />
       `;
   }
 }
