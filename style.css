@@ -391,12 +391,15 @@ html {
         font-size: 0.75em;
     }
 
+    .logo {
+        font-size: 0.7em;
+    }
 
     #mobile-header {
         display: flex;
         width: 90vw;
         align-items: flex-end;
-        justify-content: flex-end;
+        justify-content: space-between;
     }
 
     #mobile-nav {

@@ -44,6 +44,7 @@ class MobileHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
         <header id="mobile-header">
+        <a href="./index.html"><img src="media/images/AdamBCodesLogo.png" class="logo"></a>
       <img id="hamburger-icon" src="./media/icons/hamburger.png" alt="menu button">
     </header>
     <nav id="mobile-nav" class="mobile-nav-hidden">
