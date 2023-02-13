@@ -117,9 +117,6 @@ html {
   background-color: var(--main-bg-color);
 }
 
-#desktop-header {
-    flex-direction: row;
-}
 
 #intermediate-coding {
     background-color: var(--main-bg-color);
@@ -355,6 +352,10 @@ html {
         display: none;
     }
 
+    desktop-header {
+        display: none;
+    }
+
     #hamburger-icon {
         background-color: var(--accent-color3);
         border-radius: 20%;
@@ -376,6 +377,47 @@ html {
         align-items: flex-end;
         justify-content: flex-end;
     }
+
+    #mobile-nav {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--main-bg-color);
+        font-size: 2em;
+        position: fixed;
+        width: 105vw;
+        height: 100vh;
+    }
+
+    .mobile-nav-shown {
+        top: 0vh;
+        right: 0vw;
+        /* min-height: 100vh;
+        min-width: 100vw; */
+        transition: ease-out 0.5s;
+    }
+
+    .mobile-nav-hidden {
+        top: 00vh;
+        right: -100vh;
+        transition: ease-in 0.5s;
+    }
+
+    #mobile-nav div {
+        margin: 3em;
+    }
+
+    #mobile-menu-exit-button {
+        position: absolute;
+        border-radius: 25%;
+        padding: 0.25em;
+        max-width: 15px;
+        right: 0vw;
+        margin-top: 0.5em;
+        margin-right: 1.37em;
+        background-color: var(--accent-color3);
+    }
+
     .project {
         flex-direction: column;
         align-items: center;

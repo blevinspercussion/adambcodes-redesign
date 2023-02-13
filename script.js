@@ -55,6 +55,10 @@ const tutoringMenu = document.getElementById("tutoring-menu");
 const aboutMenuItem = document.getElementById("about-menu-item");
 const contactMenuItem = document.getElementById("contact-menu-item");
 
+const mobileNavMenu = document.getElementById("mobile-nav");
+const hamburgerButton = document.getElementById("hamburger-icon");
+const mobileMenuExitButton = document.getElementById("mobile-menu-exit-button");
+
 // DOM Functions
 
 function showProjectsMenu() {
@@ -79,6 +83,16 @@ function hideTutoringMenu() {
   tutoringMenu.classList.remove("tutoring-menu-shown");
   tutoringMenu.classList.add("tutoring-menu-hidden");
   tutoringMenuItem.classList.remove("menu-item-active");
+}
+
+function showMobileMenu() {
+    mobileNavMenu.classList.remove("mobile-nav-hidden");
+    mobileNavMenu.classList.add("mobile-nav-shown");
+}
+
+function hideMobileMenu() {
+    mobileNavMenu.classList.remove("mobile-nav-shown");
+    mobileNavMenu.classList.add("mobile-nav-hidden");
 }
 
 // Event listeners
@@ -117,4 +131,14 @@ aboutMenuItem.addEventListener("mouseenter", () => {
 contactMenuItem.addEventListener("mouseenter", () => {
   hideProjectsMenu();
   hideTutoringMenu();
+});
+
+
+hamburgerButton.addEventListener("click", () => {
+    showMobileMenu();
+});
+
+mobileMenuExitButton.addEventListener("click", () => {
+    console.log('clicked');
+    hideMobileMenu();
 });
