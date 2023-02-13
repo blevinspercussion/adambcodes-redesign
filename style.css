@@ -364,7 +364,6 @@ html {
 
     #mobile-header {
         display: flex;
-        height: 20vh;
         width: 90vw;
         align-items: flex-end;
         justify-content: flex-end;
