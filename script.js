@@ -37,8 +37,39 @@ class DesktopHeader extends HTMLElement {
   }
 }
 
+class MobileHeader extends HTMLElement {
+    constructor() {
+        super();
+    }
+    connectedCallback() {
+        this.innerHTML = `
+        <header id="mobile-header">
+      <img id="hamburger-icon" src="./media/icons/hamburger.png" alt="menu button">
+    </header>
+    <nav id="mobile-nav" class="mobile-nav-hidden">
+      <img id="mobile-menu-exit-button" src="./media/icons/exit.svg">
+      <ul>
+        <div>
+          <li><a href="./index.html">Projects</a></li>
+        </div>
+        <div>
+          <li><a href="./tutoring.html">Tutoring</a></li>
+        </div>
+        <div>
+          <li><a href="./about.html">About Me</a></li>
+        </div>
+        <div>
+          <li><a href="./contact.html">Contact</a></li>
+        </div>
+      </ul>
+    </nav>
+    `;
+    }
+}
+
 // Define custom elements
 customElements.define("desktop-header", DesktopHeader);
+customElements.define("mobile-header", MobileHeader);
 
 // Define DOM elements
 

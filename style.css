@@ -367,9 +367,18 @@ html {
         flex-direction: column-reverse;
     }
 
+    .intro-main-text {
+        font-size: 2em;
+    }
+
     #intro p {
         font-size: 1.5em;
     }
+
+    #intro.tutoring {
+        font-size: 0.75em;
+    }
+
 
     #mobile-header {
         display: flex;
@@ -435,6 +444,11 @@ html {
 
     .projects h3 {
         font-size: 1.5em;
+    }
+
+    #secondary-intro {
+        display: flex;
+        flex-direction: column;
     }
 
     section {
