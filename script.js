@@ -38,11 +38,11 @@ class DesktopHeader extends HTMLElement {
 }
 
 class MobileHeader extends HTMLElement {
-    constructor() {
-        super();
-    }
-    connectedCallback() {
-        this.innerHTML = `
+  constructor() {
+    super();
+  }
+  connectedCallback() {
+    this.innerHTML = `
         <header id="mobile-header">
       <img id="hamburger-icon" src="./media/icons/hamburger.png" alt="menu button">
     </header>
@@ -64,7 +64,7 @@ class MobileHeader extends HTMLElement {
       </ul>
     </nav>
     `;
-    }
+  }
 }
 
 // Define custom elements
@@ -117,13 +117,13 @@ function hideTutoringMenu() {
 }
 
 function showMobileMenu() {
-    mobileNavMenu.classList.remove("mobile-nav-hidden");
-    mobileNavMenu.classList.add("mobile-nav-shown");
+  mobileNavMenu.classList.remove("mobile-nav-hidden");
+  mobileNavMenu.classList.add("mobile-nav-shown");
 }
 
 function hideMobileMenu() {
-    mobileNavMenu.classList.remove("mobile-nav-shown");
-    mobileNavMenu.classList.add("mobile-nav-hidden");
+  mobileNavMenu.classList.remove("mobile-nav-shown");
+  mobileNavMenu.classList.add("mobile-nav-hidden");
 }
 
 // Event listeners
@@ -164,12 +164,11 @@ contactMenuItem.addEventListener("mouseenter", () => {
   hideTutoringMenu();
 });
 
-
 hamburgerButton.addEventListener("click", () => {
-    showMobileMenu();
+  showMobileMenu();
 });
 
 mobileMenuExitButton.addEventListener("click", () => {
-    console.log('clicked');
-    hideMobileMenu();
+  console.log("clicked");
+  hideMobileMenu();
 });

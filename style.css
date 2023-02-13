@@ -138,6 +138,10 @@ html {
     display: none;
 }
 
+#mobile-nav {
+    display: none;
+}
+
 #projects-menu {
   flex-direction: row;
   position: absolute;
