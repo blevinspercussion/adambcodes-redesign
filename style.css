@@ -34,11 +34,40 @@ a:hover {
   color: var(--accent-color3);
 }
 
+#about {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#about div {
+  display: flex;
+  flex-direction: column;
+  margin: 3em;
+}
+
+#about div p {
+  color: var(--accent-color2);
+  font-size: 1.5em;
+  margin: 1em;
+}
+
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--main-bg-color);
+}
+
+.button {
+  width: 5em;
+  height: 3em;
+  font-size: 2em;
+  align-self: center;
+  margin: 2em;
+  background-color: var(--accent-color2);
+  color: var(--accent-color3);
+  border-radius: 10px;
 }
 
 form {
@@ -69,16 +98,7 @@ form textarea {
     align-items: center;
 }
 
-.button {
-    width: 5em;
-    height: 3em;
-    font-size: 2em;
-    align-self: center;
-    margin: 2em;
-    background-color: var(--accent-color2);
-    color: var(--accent-color3);
-    border-radius: 10px;
-}
+
 
 header {
   display: flex;
@@ -96,23 +116,7 @@ html {
   scroll-behavior: smooth;
 }
 
-#about {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-}
 
-#about div {
-    display: flex;
-    flex-direction: column;
-    margin: 3em;
-}
-
-#about div p {
-    color: var(--accent-color2);
-    font-size: 1.5em;
-    margin: 1em;
-}
 
 #coding-projects {
   background-color: var(--main-bg-color);
@@ -290,6 +294,7 @@ html {
   color: var(--accent-color3);
   font-size: 3em;
   margin-left: 15vw;
+  text-decoration: underline solid 2px;
 }
 
 .projects h3 {
@@ -338,6 +343,10 @@ html {
 
 .tutoring p {
   margin: 1em;
+}
+
+ul {
+  list-style: none;
 }
 
 .vertical-line {
