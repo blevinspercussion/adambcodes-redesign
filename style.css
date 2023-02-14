@@ -70,6 +70,10 @@ body {
   border-radius: 10px;
 }
 
+#coding-projects {
+  background-color: var(--main-bg-color);
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -98,13 +102,24 @@ form textarea {
     align-items: center;
 }
 
-
-
 header {
   display: flex;
   align-items: center;
   justify-content: space-around;
   max-width: 1500px;
+}
+
+.hidden-pic {
+  max-width: 35vw;
+  min-width: 25vw;
+  display: none;
+  transition: 1s;
+  position: absolute;
+  right: -5vw;
+}
+
+.hilight {
+  color: var(--accent-color3);
 }
 
 hr {
@@ -115,13 +130,6 @@ hr {
 html {
   scroll-behavior: smooth;
 }
-
-
-
-#coding-projects {
-  background-color: var(--main-bg-color);
-}
-
 
 #intermediate-coding {
     background-color: var(--main-bg-color);
@@ -139,12 +147,95 @@ html {
   max-width: 50vw;
 }
 
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  max-width: 15em;
+  transition: 0.35s;
+}
+
+.logo:hover {
+    filter: drop-shadow(5px 5px 4px var(--accent-color2));
+    transition: 0.35s;
+}
+
+.menu-hor {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.menu-hor li {
+  margin: 2em;
+  font-size: 1.25em;
+}
+
+.menu-item {
+  padding: 0.25em;
+}
+
+.menu-item-active {
+  background-color: var(--accent-color1);
+  transition: 0.5s;
+}
+
+.menu-item-inactive {
+  background-color: var(--main-bg-color);
+  transition: 0.5s;
+}
+
 #mobile-header {
     display: none;
 }
 
 #mobile-nav {
     display: none;
+}
+
+.project {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.project img {
+  max-width: 50vw;
+  margin: 3em;
+}
+
+.project-description {
+  color: var(--accent-color3);
+  font-size: 1.25em;
+  margin: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.project-description p {
+  margin-top: 1em;
+}
+
+.projects {
+  background-color: var(--accent-color1);
+  align-items: center;
+  justify-content: center;
+}
+
+.projects h2 {
+  color: var(--accent-color3);
+  font-size: 3em;
+  margin-left: 15vw;
+  text-decoration: underline solid 2px;
+}
+
+.projects h3 {
+  font-size: 2em;
 }
 
 #projects-menu {
@@ -190,6 +281,16 @@ html {
   margin: 1em;
 }
 
+.tutoring {
+  font-size: 0.5em;
+  margin: 6em;
+  flex-direction: column;
+}
+
+.tutoring p {
+  margin: 1em;
+}
+
 #tutoring-menu {
   flex-direction: row;
   position: absolute;
@@ -232,117 +333,11 @@ html {
   margin: 1em;
 }
 
-.hidden-pic {
-  max-width: 35vw;
-  min-width: 25vw;
-  display: none;
-  transition: 1s;
-  position: absolute;
-  right: -5vw;
-}
-
-.hilight {
-  color: var(--accent-color3);
-}
-
-.menu-item {
-  padding: 0.25em;
-}
-
-.menu-item-active {
-  background-color: var(--accent-color1);
-  transition: 0.5s;
-}
-
-.menu-item-inactive {
-  background-color: var(--main-bg-color);
-  transition: 0.5s;
-}
-
-.project {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-.project img {
-  max-width: 50vw;
-  margin: 3em;
-}
-
-.project-description {
-  color: var(--accent-color3);
-  font-size: 1.25em;
-  margin: 3em;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-
-.project-description p {
-  margin-top: 1em;
-}
-
-.projects {
-  background-color: var(--accent-color1);
-  align-items: center;
-  justify-content: center;
-}
-
-.projects h2 {
-  color: var(--accent-color3);
-  font-size: 3em;
-  margin-left: 15vw;
-  text-decoration: underline solid 2px;
-}
-
-.projects h3 {
-  font-size: 2em;
-}
-
 .shown-pic {
   max-width: 35vw;
   display: block;
   transition: 1s;
   margin: 3em;
-}
-
-.links {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo {
-  max-width: 15em;
-  transition: 0.35s;
-}
-
-.logo:hover {
-    filter: drop-shadow(5px 5px 4px var(--accent-color2));
-    transition: 0.35s;
-}
-
-.menu-hor {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.menu-hor li {
-  margin: 2em;
-  font-size: 1.25em;
-}
-
-.tutoring {
-  font-size: 0.5em;
-  margin: 6em;
-  flex-direction: column;
-}
-
-.tutoring p {
-  margin: 1em;
 }
 
 ul {
