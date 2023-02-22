@@ -106,7 +106,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  max-width: 1500px;
+  max-width: 100vw;
 }
 
 .hidden-pic {
@@ -245,7 +245,7 @@ html {
   /* right: 550px; */
   background-color: var(--accent-color1);
   list-style: none;
-  float: left;
+  /* float: left; */
   max-width: 35vw;
 }
 
@@ -260,7 +260,7 @@ html {
   right: 250px;
   background-color: var(--accent-color1);
   list-style: none;
-  float: left;
+  /* float: left; */
   max-width: 35vw;
   transition: 0.5s;
   filter: blur(0px);
