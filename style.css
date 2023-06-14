@@ -241,7 +241,7 @@ html {
 #projects-menu {
   flex-direction: row;
   position: absolute;
-  top: 70px;
+  top: 100px;
   /* right: 550px; */
   background-color: var(--accent-color1);
   list-style: none;
@@ -294,7 +294,7 @@ html {
 #tutoring-menu {
   flex-direction: row;
   position: absolute;
-  top: 70px;
+  top: 100px;
   /* right: 550px; */
   background-color: var(--accent-color1);
   list-style: none;
